@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="TraineesXSLT.xsl"?>
+
+<Trainees>
+
+  <Trainee>
+
+    <name>Remaas</name>
+
+    <Email>Remaas@Email.com</Email>
+
+    <Course>Data development</Course>
+
+  </Trainee>
+
+  <Trainee>
+
+    <name>Mayar</name>
+
+    <Email>Mayar@Email.com</Email>
+
+    <Course>Data development</Course>
+
+  </Trainee>
+
+  <Trainee>
+
+    <name>Norah</name>
+
+    <Email>Norah@Email.com</Email>
+
+    <Course>Data development</Course>
+
+  </Trainee>
+
+</Trainees>
