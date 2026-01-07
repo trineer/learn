@@ -1,0 +1,96 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0"
+
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+
+
+  <xsl:template match="/">
+
+    <html>
+
+      <body>
+
+
+
+        <h2>Trainees Information</h2>
+
+
+
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+
+          <tr style="background-color: #f2f2f2;">
+
+            <th>Name</th>
+
+            <th>Email</th>
+
+            <th>Course</th>
+
+            <th>Action</th>
+
+          </tr>
+
+
+
+          <xsl:for-each select="Trainees/Trainee">
+
+            <tr>
+
+              <td><xsl:value-of select="name"/></td>
+
+              <td><xsl:value-of select="Email"/></td>
+
+              <td><xsl:value-of select="Course"/></td>
+
+              <td>
+
+                <form action="delete.php" method="post">
+
+                  <input type="hidden" name="index" value="{position()}"/>
+
+                  <input type="submit" value="Delete"/>
+
+                </form>
+
+              </td>
+
+            </tr>
+
+          </xsl:for-each>
+
+        </table>
+
+
+
+        <br/><br/>
+
+
+
+        <h3>Add trainee</h3>
+
+        <form action="add.php" method="post">
+
+          Name: <input type="text" name="name" required="required"/>
+
+          Email: <input type="email" name="Email" required="required"/>
+
+          Course: <input type="text" name="Course" required="required"/>
+
+          <input type="submit" value="Add"/>
+
+        </form>
+
+
+
+      </body>
+
+    </html>
+
+  </xsl:template>
+
+
+
+</xsl:stylesheet>
